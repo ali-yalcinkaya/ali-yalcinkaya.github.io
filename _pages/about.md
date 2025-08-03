@@ -4,7 +4,7 @@ title: "Welcome !"
 author_profile: true
 ---
 
-I am a researcher in **neuroscience** with a background in psychology and a Master’s degree in Neuroscience from İstanbul Medipol University (Supervisor: Prof. Dr. Lütfü Hanoğlu).  
+I am a researcher in **neuroscience** with a background in psychology and a Master’s degree in Neuroscience from İstanbul Medipol University (Supervisor: [Prof. Dr. Lütfü Hanoğlu](https://scholar.google.com.tr/citations?user=wyxuVQgAAAAJ&hl=en)).
 My work focuses on **functional and structural neuroimaging**, **neuromodulation (tDCS/TMS)**, and **computational analysis** in clinical and cognitive neuroscience.
 
 
