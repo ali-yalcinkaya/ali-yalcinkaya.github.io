@@ -3,8 +3,8 @@ import os
 import json
 
 # --- AYARLAR ---
-SCHOLAR_ID = "M3pcI0EAAAAJ"  # Sadece ID kısmı
-API_KEY = os.getenv("SERPAPI_KEY")  # GitHub Secrets'a eklenmeli
+SCHOLAR_ID = "M3pcI0EAAAAJ"  # Google Scholar profil ID (URL'den al)
+API_KEY = os.getenv("SERPAPI_KEY")  # GitHub Secrets'tan okunur
 
 if not API_KEY:
     raise ValueError("SERPAPI_KEY environment variable not set in GitHub Actions secrets.")
@@ -18,7 +18,8 @@ params = {
 }
 
 response = requests.get(url, params=params)
-response.raise_for_status()  # HTTP hatası varsa durdur
+if response.status_code != 200:
+    raise RuntimeError(f"SerpAPI request failed with status code {response.status_code}")
 
 data = response.json()
 
