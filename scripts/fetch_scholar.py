@@ -1,31 +1,31 @@
-from scholarly import scholarly
-import json
+import requests
 import os
+import json
 
-# Google Scholar kullanıcı ID
-SCHOLAR_ID = "M3pcI0EAAAAJ"  # Senin ID
+# --- AYARLAR ---
+SCHOLAR_ID = "M3pcI0EAAAAJ"  # Sadece ID kısmı
+API_KEY = os.getenv("SERPAPI_KEY")  # GitHub Secrets'a eklenmeli
 
-# Yayınları çek
-author = scholarly.search_author_id(SCHOLAR_ID)
-author = scholarly.fill(author, sections=["publications"])
+if not API_KEY:
+    raise ValueError("SERPAPI_KEY environment variable not set in GitHub Actions secrets.")
 
-publications = []
-for pub in author["publications"]:
-    title = pub["bib"]["title"]
-    year = pub["bib"].get("pub_year", "N/A")
-    venue = pub["bib"].get("venue", "")
-    link = f"https://scholar.google.com/citations?view_op=view_citation&hl=en&user={SCHOLAR_ID}&citation_for_view={pub['author_pub_id']}"
+# --- SerpAPI İstek ---
+url = "https://serpapi.com/search"
+params = {
+    "engine": "google_scholar_author",
+    "author_id": SCHOLAR_ID,
+    "api_key": API_KEY
+}
 
-    publications.append({
-        "title": title,
-        "year": year,
-        "venue": venue,
-        "link": link
-    })
+response = requests.get(url, params=params)
+response.raise_for_status()  # HTTP hatası varsa durdur
 
-# _data klasörüne kaydet
-os.makedirs("_data", exist_ok=True)
-with open("_data/publications.json", "w", encoding="utf-8") as f:
-    json.dump(publications, f, ensure_ascii=False, indent=2)
+data = response.json()
 
-print(f"{len(publications)} publication(s) saved to _data/publications.json")
+# --- ÇIKTIYI KAYDET ---
+output_path = "_data/publications.json"
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"Google Scholar verisi '{output_path}' dosyasına kaydedildi.")
