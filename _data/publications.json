@@ -1,0 +1,123 @@
+{
+  "search_metadata": {
+    "id": "688f84169df9dd8b02ba4098",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/faef1d43511f9225/688f84169df9dd8b02ba4098.json",
+    "created_at": "2025-08-03 15:45:26 UTC",
+    "processed_at": "2025-08-03 15:45:26 UTC",
+    "google_scholar_author_url": "https://scholar.google.com/citations?user=M3pcI0EAAAAJ&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/faef1d43511f9225/688f84169df9dd8b02ba4098.html",
+    "total_time_taken": 0.27
+  },
+  "search_parameters": {
+    "engine": "google_scholar_author",
+    "author_id": "M3pcI0EAAAAJ",
+    "hl": "en"
+  },
+  "author": {
+    "name": "Ali Yalçınkaya",
+    "affiliations": "İstanbul Medipol University",
+    "email": "Verified email at std.medipol.edu.tr",
+    "interests": [
+      {
+        "title": "memory",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:memory",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Amemory"
+      },
+      {
+        "title": "neuromodulation",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:neuromodulation",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Aneuromodulation"
+      },
+      {
+        "title": "computational neuroimaging",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:computational_neuroimaging",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Acomputational_neuroimaging"
+      },
+      {
+        "title": "fmri",
+        "link": "https://scholar.google.com/citations?view_op=search_authors&hl=en&mauthors=label:fmri",
+        "serpapi_link": "https://serpapi.com/search.json?engine=google_scholar_profiles&hl=en&mauthors=label%3Afmri"
+      }
+    ],
+    "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_128.png"
+  },
+  "articles": [
+    {
+      "title": "Hippocampal connectivity dynamics and volumetric alterations predict cognitive status in migraine: A resting-state fMRI study",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=M3pcI0EAAAAJ&citation_for_view=M3pcI0EAAAAJ:u-x6o8ySG0sC",
+      "citation_id": "M3pcI0EAAAAJ:u-x6o8ySG0sC",
+      "authors": "S Cankaya, B Ayyildiz, D Sayman, U Duran, D Ucak, R Karaca, S Ayyildiz, ...",
+      "publication": "NeuroImage 305, 120961, 2025",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1122731872955448332",
+        "serpapi_link": "https://serpapi.com/search.json?cites=1122731872955448332&engine=google_scholar&hl=en",
+        "cites_id": "1122731872955448332"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Anodal tDCS over the left DLPFC Enhances Brain Connectivity and Cognitive Recovery After Acute Mild Stroke",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=M3pcI0EAAAAJ&citation_for_view=M3pcI0EAAAAJ:d1gkVwhDpl0C",
+      "citation_id": "M3pcI0EAAAAJ:d1gkVwhDpl0C",
+      "authors": "A Yalçınkaya, B Yuluğ, L Hanoğlu, EÖ Öktem, C Sayman, Ş Çankaya, ...",
+      "publication": "Brain Stimulation: Basic, Translational, and Clinical Research in …, 2025",
+      "cited_by": {
+        "value": null
+      },
+      "year": "2025"
+    }
+  ],
+  "cited_by": {
+    "table": [
+      {
+        "citations": {
+          "all": 3,
+          "since_2020": 3
+        }
+      },
+      {
+        "h_index": {
+          "all": 1,
+          "since_2020": 1
+        }
+      },
+      {
+        "i10_index": {
+          "all": 0,
+          "since_2020": 0
+        }
+      }
+    ]
+  },
+  "co_authors": [
+    {
+      "name": "Burak Yulug",
+      "link": "https://scholar.google.com/citations?user=Y7CVQrMAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=Y7CVQrMAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "Y7CVQrMAAAAJ",
+      "affiliations": "Alanya Alaaddin Keykubat University",
+      "email": "Verified email at alanya.edu.tr",
+      "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+    },
+    {
+      "name": "Lütfü Hanoğlu",
+      "link": "https://scholar.google.com/citations?user=wyxuVQgAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=wyxuVQgAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "wyxuVQgAAAAJ",
+      "affiliations": "İstanbul Medipol Üniversitesi",
+      "email": "Verified email at medipol.edu.tr",
+      "thumbnail": "https://scholar.google.com/citations/images/avatar_scholar_56.png"
+    },
+    {
+      "name": "Halil Aziz Velioglu",
+      "link": "https://scholar.google.com/citations?user=qJ6EFJEAAAAJ&hl=en",
+      "serpapi_link": "https://serpapi.com/search.json?author_id=qJ6EFJEAAAAJ&engine=google_scholar_author&hl=en",
+      "author_id": "qJ6EFJEAAAAJ",
+      "affiliations": "Feinstein Institute for Medical Research - Psychiatric Neuro Center",
+      "email": "Verified email at northwell.edu",
+      "thumbnail": "https://scholar.googleusercontent.com/citations?view_op=small_photo&user=qJ6EFJEAAAAJ&citpid=1"
+    }
+  ]
+}
