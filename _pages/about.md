@@ -1,10 +1,8 @@
 ---
 permalink: /
-title: "Ali Yalçınkaya - Neuroscientist"
+title: "Welcome !"
 author_profile: true
 ---
-
-## Welcome
 
 I am a researcher in **neuroscience** with a background in psychology and a Master’s degree in Neuroscience from İstanbul Medipol University (Supervisor: Prof. Dr. Lütfü Hanoğlu).  
 My work focuses on **functional and structural neuroimaging**, **neuromodulation (tDCS/TMS)**, and **computational analysis** in clinical and cognitive neuroscience.
