@@ -3,7 +3,7 @@ locale                   : "en-US"
 title                    : "Ali Yalçınkaya"
 title_separator          : "-"
 name                     : &name "Ali Yalçınkaya"
-description              : &description "Researcher & Neuropsychologist – Neuroscience"
+description              : &description "Cognitive Computational Neuroscience & Personalized Brain Stimulation"
 url                      : https://ali-yalcinkaya.github.io
 baseurl                  : ""
 repository               : "ali-yalcinkaya/ali-yalcinkaya.github.io"
@@ -34,8 +34,8 @@ social:
 # Site Author
 author:
   name             : "Ali Yalçınkaya"
-  avatar           : "ali_yalcinkaya.jpg"
-  bio              : "Researcher & Neuropsychologist – Neuroscience"
+  avatar           : "profile.jpg"
+  bio              : "Neuroscientist"
   location         : "Turkey"
   employer         :
   googlescholar    : "https://scholar.google.com/citations?user=M3pcI0EAAAAJ&hl=en"
