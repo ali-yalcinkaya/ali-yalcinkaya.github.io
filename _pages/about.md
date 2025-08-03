@@ -25,8 +25,3 @@ My work focuses on **functional and structural neuroimaging**, **neuromodulation
 ## Publications
 See the [Publications](/publications/) page for a complete list of peer-reviewed articles, including works published in *NeuroImage* and *Translational Psychiatry*.
 
----
-
-## Contact
-📧 [Your email]  
-🔗 [Google Scholar](#) | [ResearchGate](#) | [ORCID](#)
