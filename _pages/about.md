@@ -16,10 +16,4 @@ My work focuses on **functional and structural neuroimaging**, **neuromodulation
 - **Episodic memory**, hippocampal subregions, and network representation
 - **Sleep and consciousness**, particularly REM dream-wake comparisons
 - **Machine learning** and **computational modeling** in neuroimaging
-
-
----
-
-## Publications
-See the [Publications](/publications/) page for a complete list of peer-reviewed articles, including works published in *NeuroImage* and *Translational Psychiatry*.
-
+- 
