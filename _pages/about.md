@@ -17,3 +17,9 @@ My work focuses on **functional and structural neuroimaging**, **neuromodulation
 - **Sleep and consciousness**, particularly REM dream-wake comparisons
 - **Machine learning** and **computational modeling** in neuroimaging
 
+---
+
+<div style="text-align: center;">
+  <img src="/images/poster1.jpg" alt="Poster" style="max-width:100%; height:auto; border:1px solid #ccc; border-radius:8px;">
+  <p><em>Presented my master's thesis poster at the 6th International Brain Stimulation Conference in Kobe, Japan.</em></p>
+</div>
