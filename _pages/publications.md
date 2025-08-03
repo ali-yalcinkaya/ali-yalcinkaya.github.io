@@ -1,8 +1,11 @@
 ---
-layout: single
+layout: collection
 title: "Publications"
+collection: publications
 permalink: /publications/
+author_profile: true
 ---
+
 
 <ul>
 {% for pub in site.data.publications %}
