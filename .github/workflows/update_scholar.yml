@@ -17,9 +17,11 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install scholarly
+        run: pip install scholarly serpapi
 
       - name: Fetch Google Scholar publications
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
         run: python scripts/fetch_scholar.py
 
       - name: Commit and push changes
