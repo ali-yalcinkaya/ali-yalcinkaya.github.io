@@ -1,7 +1,8 @@
 # Site Settings
 locale                   : "en-US"
 title                    : "Ali Yalçınkaya"
-logo                     : "logo.png"
+logo                     : "/images/logo.png"
+
 title_separator          : "-"
 name                     : &name "Ali Yalçınkaya"
 description              : &description "Cognitive Computational Neuroscience & Personalized Brain Stimulation"
