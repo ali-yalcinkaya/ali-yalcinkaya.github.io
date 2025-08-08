@@ -1,0 +1,16 @@
+ID,Grup,Yas,Cinsiyet,Anksiyete,Depresyon,IQ,Performans
+1,Kontrol,25,K,45,32,110,85
+2,Kontrol,28,E,38,28,105,82
+3,Kontrol,22,K,42,35,108,78
+4,Kontrol,30,E,35,30,112,88
+5,Kontrol,26,K,48,38,106,80
+6,Deney,24,E,52,45,115,92
+7,Deney,27,K,55,42,118,95
+8,Deney,29,E,49,40,113,89
+9,Deney,25,K,58,48,116,94
+10,Deney,31,E,51,43,114,91
+11,Kontrol,23,K,40,29,107,83
+12,Kontrol,29,E,37,31,109,86
+13,Deney,26,K,54,46,117,93
+14,Deney,28,E,50,41,111,87
+15,Kontrol,24,E,44,33,104,79

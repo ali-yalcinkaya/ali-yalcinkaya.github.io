@@ -1,0 +1,161 @@
+# Site Settings
+locale                   : "en-US"
+title                    : "Ali Yalçınkaya"
+logo                     : "/images/logo.png"
+
+title_separator          : "-"
+name                     : &name "Ali Yalçınkaya"
+description              : &description "Cognitive Computational Neuroscience & Personalized Brain Stimulation"
+url                      : https://ali-yalcinkaya.github.io
+baseurl                  : ""
+repository               : "ali-yalcinkaya/ali-yalcinkaya.github.io"
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
+social:
+  type                   : Person
+  name                   : "Ali Yalçınkaya"
+  links                   :
+  
+
+# Site Author
+author:
+  name             : "Ali Yalçınkaya"
+  avatar           : "profile.jpg"
+  bio              : "Neuroscientist"
+  location         : "Turkey"
+  employer         :
+  googlescholar    : "https://scholar.google.com/citations?user=M3pcI0EAAAAJ&hl=en"
+  email            : "canaliyalcinkaya@gmail.com"
+  github           : "ali-yalcinkaya"
+  researchgate     : "https://www.researchgate.net/profile/Ali-Yalcinkaya-3?ev=hdr_xprf"
+  bluesky          : "ali-yalcinkaya.bsky.social"
+  kaggle           :
+  stackoverflow    :
+  artstation       :
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Europe/Istanbul
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-maps
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+theme: jekyll-theme-merlot
