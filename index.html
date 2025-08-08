@@ -6,8 +6,8 @@ permalink: /
 
 <div class="container">
     <div class="header">
-        <h1>👨‍🎓 Ali Yalcinkaya</h1>
-        <p>Akademik Web Sitesi</p>
+        <h1>👨‍�� Ali Yalcinkaya</h1>
+        <p>Akademik Web Sitesi & İstatistik Otomasyon Sistemi</p>
     </div>
     
     <div class="main-content">
@@ -16,7 +16,12 @@ permalink: /
             <p>Bu benim akademik web sitemdir. Araştırmalarım, yayınlarım ve öğretim faaliyetlerim hakkında bilgi bulabilirsiniz.</p>
             
             <div class="quick-links">
-                <a href="/statistics/" class="cta-button">📊 İstatistik Otomasyon Sistemi</a>
+                <a href="https://your-shiny-server.com/statistics/" class="cta-button">
+                    🚀 Analiz Sistemini Başlat (Docker)
+                </a>
+                <a href="/statistics/" class="cta-button-secondary">
+                    📊 Demo Sistemi (GitHub Pages)
+                </a>
             </div>
         </div>
         
@@ -39,115 +44,223 @@ permalink: /
                 <p>CSV dosyalarınızı yükleyin, analizleri seçin, APA formatında raporlar alın!</p>
             </div>
         </div>
+        
+        <div class="system-info">
+            <h3>�� Sistem Bilgileri</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>🐳 Docker Shiny Server</h4>
+                    <p><strong>URL:</strong> <a href="https://your-shiny-server.com/statistics/">https://your-shiny-server.com/statistics/</a></p>
+                    <p><strong>Özellikler:</strong> Gerçek R analizleri, APA raporları, tam kontrol</p>
+                </div>
+                <div class="info-card">
+                    <h4>📄 GitHub Pages Demo</h4>
+                    <p><strong>URL:</strong> <a href="/statistics/">/statistics/</a></p>
+                    <p><strong>Özellikler:</strong> Hızlı demo, simüle edilmiş sonuçlar</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    
-    .header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.main-content {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-section h2 {
+    color: #667eea;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.quick-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.system-info {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.system-info h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.info-card h4 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
     .header h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        color: #333;
-    }
-    
-    .header p {
-        font-size: 1.2rem;
-        color: #666;
+        font-size: 2rem;
     }
     
     .main-content {
-        background: white;
-        border-radius: 15px;
-        padding: 40px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        margin-bottom: 30px;
-    }
-    
-    .welcome-section {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .welcome-section h2 {
-        color: #667eea;
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .welcome-section p {
-        font-size: 1.1rem;
-        color: #666;
-        margin-bottom: 30px;
-    }
-    
-    .quick-links {
-        margin-top: 30px;
-    }
-    
-    .cta-button {
-        display: inline-block;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 15px 30px;
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        color: white;
-        text-decoration: none;
+        padding: 20px;
     }
     
     .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+        grid-template-columns: 1fr;
     }
     
-    .feature-card {
-        background: #f8f9fa;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        border-left: 4px solid #667eea;
-        transition: transform 0.3s ease;
+    .quick-links {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .feature-card:hover {
-        transform: translateY(-5px);
+    .info-grid {
+        grid-template-columns: 1fr;
     }
-    
-    .feature-card h3 {
-        color: #667eea;
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-    }
-    
-    .feature-card p {
-        color: #666;
-        line-height: 1.6;
-    }
-    
-    .icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        display: block;
-    }
+}
 </style>
