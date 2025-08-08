@@ -1,238 +1,153 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Yalcinkaya - Akademik Web Sitesi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-        
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .main-content {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 30px;
-        }
-        
-        .stats-section {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .stats-section h2 {
-            color: #667eea;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .stats-section p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            color: white;
-            text-decoration: none;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .feature-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-        .footer {
-            text-align: center;
-            color: white;
-            padding: 20px;
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
+---
+layout: page
+title: Home
+permalink: /
+---
+
+<div class="container">
+    <div class="header">
+        <h1>👨‍🎓 Ali Yalcinkaya</h1>
+        <p>Akademik Web Sitesi</p>
+    </div>
+    
+    <div class="main-content">
+        <div class="welcome-section">
+            <h2>Hoş Geldiniz!</h2>
+            <p>Bu benim akademik web sitemdir. Araştırmalarım, yayınlarım ve öğretim faaliyetlerim hakkında bilgi bulabilirsiniz.</p>
             
-            .main-content {
-                padding: 20px;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>👨‍🎓 Ali Yalcinkaya</h1>
-            <p>Akademik Web Sitesi & İstatistik Otomasyon Sistemi</p>
+            <div class="quick-links">
+                <a href="/statistics/" class="cta-button">📊 İstatistik Otomasyon Sistemi</a>
+            </div>
         </div>
         
-        <div class="main-content">
-            <div class="stats-section">
-                <h2>📊 İstatistik Otomasyon Sistemi</h2>
+        <div class="features">
+            <div class="feature-card">
+                <span class="icon">📚</span>
+                <h3>Araştırmalar</h3>
+                <p>Güncel araştırma projelerim ve yayınlarım hakkında bilgi edinin.</p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="icon">🎓</span>
+                <h3>Öğretim</h3>
+                <p>Verdiğim dersler ve eğitim materyalleri.</p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="icon">📊</span>
+                <h3>İstatistik Sistemi</h3>
                 <p>CSV dosyalarınızı yükleyin, analizleri seçin, APA formatında raporlar alın!</p>
-                <a href="statistics/" class="cta-button">🚀 Analiz Sistemini Başlat</a>
             </div>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <span class="icon">📁</span>
-                    <h3>Kolay Veri Yükleme</h3>
-                    <p>CSV dosyalarınızı sürükle-bırak ile yükleyin. Sistem otomatik olarak değişken türlerini algılar.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="icon">🔬</span>
-                    <h3>Kapsamlı Analizler</h3>
-                    <p>ANOVA, T-test, Korelasyon, Regresyon ve daha fazlası. Tüm analizler otomatik normallik kontrolü ile.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="icon">📈</span>
-                    <h3>Görselleştirme</h3>
-                    <p>Boxplot, scatter plot, histogram ve daha fazla grafik türü. Sonuçlarınızı görsel olarak keşfedin.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="icon">📄</span>
-                    <h3>APA Raporları</h3>
-                    <p>Otomatik APA formatında Word ve PDF raporları. Akademik standartlara uygun çıktılar.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="icon">⚡</span>
-                    <h3>Hızlı Sonuçlar</h3>
-                    <p>Gerçek zamanlı analiz sonuçları. Birkaç tıklama ile kapsamlı istatistiksel raporlar.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="icon">🎯</span>
-                    <h3>Kullanıcı Dostu</h3>
-                    <p>Teknik bilgi gerektirmeyen arayüz. Herkes kolayca istatistiksel analiz yapabilir.</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 40px; text-align: center;">
-                <h3 style="color: #667eea; margin-bottom: 20px;">📋 Kullanılabilir Analizler</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-                    <div style="background: #e3f2fd; padding: 15px; border-radius: 8px;">
-                        <strong>Betimsel İstatistikler</strong><br>
-                        Ortalama, standart sapma, min-max
-                    </div>
-                    <div style="background: #e8f5e8; padding: 15px; border-radius: 8px;">
-                        <strong>T-test</strong><br>
-                        Bağımsız ve eşleştirilmiş
-                    </div>
-                    <div style="background: #fff3e0; padding: 15px; border-radius: 8px;">
-                        <strong>ANOVA</strong><br>
-                        Tek yönlü ve çok yönlü
-                    </div>
-                    <div style="background: #fce4ec; padding: 15px; border-radius: 8px;">
-                        <strong>Korelasyon</strong><br>
-                        Pearson ve Spearman
-                    </div>
-                    <div style="background: #f3e5f5; padding: 15px; border-radius: 8px;">
-                        <strong>Partial Korelasyon</strong><br>
-                        Kontrol değişkenleri ile
-                    </div>
-                    <div style="background: #e0f2f1; padding: 15px; border-radius: 8px;">
-                        <strong>Regresyon</strong><br>
-                        Basit ve çoklu
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2025 Ali Yalcinkaya. Tüm hakları saklıdır.</p>
-            <p>R Shiny ile geliştirilmiştir.</p>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .header p {
+        font-size: 1.2rem;
+        color: #666;
+    }
+    
+    .main-content {
+        background: white;
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+    }
+    
+    .welcome-section {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .welcome-section h2 {
+        color: #667eea;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-section p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 30px;
+    }
+    
+    .quick-links {
+        margin-top: 30px;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        color: white;
+        text-decoration: none;
+    }
+    
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .feature-card {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        border-left: 4px solid #667eea;
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .feature-card h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+    
+    .feature-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+    
+    .icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        display: block;
+    }
+</style>
