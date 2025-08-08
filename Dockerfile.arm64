@@ -1,10 +1,20 @@
-# Dockerfile for İstatistik Otomasyon Sistemi
+# Dockerfile for İstatistik Otomasyon Sistemi (ARM64 Support)
 # Ali Yalcinkaya - https://ali-yalcinkaya.github.io/statistics/
 
-FROM rocker/shiny:latest
+FROM ubuntu:22.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV R_VERSION=4.2.3
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    gnupg2 \
+    software-properties-common \
+    apt-transport-https \
+    ca-certificates \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
@@ -15,12 +25,24 @@ RUN apt-get update && apt-get install -y \
     libhdf5-dev \
     libnetcdf-dev \
     libudunits2-dev \
-    curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install R packages with error handling
+# Install R
+RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | apt-key add - \
+    && echo "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/" >> /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get install -y r-base=${R_VERSION}-1ubuntu2 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Shiny Server
+RUN wget https://download3.rstudio.org/ubuntu-18.04/x86_64/shiny-server-1.5.20.1002-amd64.deb \
+    && dpkg -i shiny-server-1.5.20.1002-amd64.deb \
+    && rm shiny-server-1.5.20.1002-amd64.deb
+
+# Install R packages
 RUN R -e "options(repos = c(CRAN = 'https://cran.rstudio.com/')); \
     install.packages(c( \
+        'shiny', \
         'tidyverse', \
         'rstatix', \
         'car', \
@@ -37,11 +59,17 @@ RUN R -e "options(repos = c(CRAN = 'https://cran.rstudio.com/')); \
         'corrplot' \
     ), dependencies = TRUE)"
 
+# Create Shiny user
+RUN useradd -m -s /bin/bash shiny
+
 # Copy application files
 COPY statistics/ /srv/shiny-server/statistics/
 
 # Copy Shiny Server configuration
 COPY statistics/shiny-server.conf /etc/shiny-server/shiny-server.conf
+
+# Set permissions
+RUN chown -R shiny:shiny /srv/shiny-server
 
 # Expose port
 EXPOSE 3838
