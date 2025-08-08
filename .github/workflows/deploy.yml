@@ -12,33 +12,8 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
-    - name: Setup R
-      uses: r-lib/actions/setup-r@v2
-      with:
-        r-version: '4.2'
-        
-    - name: Install R dependencies
-      uses: r-lib/actions/setup-r-dependencies@v2
-      with:
-        packages: |
-          shiny
-          tidyverse
-          rstatix
-          car
-          emmeans
-          apaTables
-          ppcor
-          officer
-          flextable
-          papaja
-          DT
-          shinyjs
-          shinyWidgets
-          plotly
-          corrplot
-          
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
