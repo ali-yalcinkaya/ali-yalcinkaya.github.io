@@ -1,36 +1,55 @@
-# Base image: Ruby with necessary dependencies for Jekyll
-FROM ruby:3.2
+# Dockerfile for İstatistik Otomasyon Sistemi
+# Ali Yalcinkaya - https://ali-yalcinkaya.github.io/statistics/
 
-# Install dependencies
+FROM rocker/shiny:4.2
+
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    nodejs \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libxml2-dev \
+    libgdal-dev \
+    libproj-dev \
+    libgeos-dev \
+    libgsl-dev \
+    libhdf5-dev \
+    libnetcdf-dev \
+    libudunits2-dev \
+    libgdal-dev \
+    libproj-dev \
+    libgeos-dev \
+    libgsl-dev \
+    libhdf5-dev \
+    libnetcdf-dev \
+    libudunits2-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Install R packages
+RUN R -e "install.packages(c( \
+    'tidyverse', \
+    'rstatix', \
+    'car', \
+    'emmeans', \
+    'apaTables', \
+    'ppcor', \
+    'officer', \
+    'flextable', \
+    'papaja', \
+    'DT', \
+    'shinyjs', \
+    'shinyWidgets', \
+    'plotly', \
+    'corrplot' \
+    ), repos='https://cran.rstudio.com/')"
 
-# Create a non-root user with UID 1000
-RUN groupadd -g 1000 vscode && \
-    useradd -m -u 1000 -g vscode vscode
+# Copy application files
+COPY statistics/ /srv/shiny-server/statistics/
 
-# Set the working directory
-WORKDIR /usr/src/app
+# Copy Shiny Server configuration
+COPY statistics/shiny-server.conf /etc/shiny-server/shiny-server.conf
 
-# Set permissions for the working directory
-RUN chown -R vscode:vscode /usr/src/app
+# Expose port
+EXPOSE 3838
 
-# Switch to the non-root user
-USER vscode
-
-# Copy Gemfile into the container (necessary for `bundle install`)
-COPY Gemfile ./
-
-
-
-# Install bundler and dependencies
-RUN gem install connection_pool:2.5.0
-RUN gem install bundler:2.3.26
-RUN bundle install
-
-# Command to serve the Jekyll site
-CMD ["jekyll", "serve", "-H", "0.0.0.0", "-w"]
-
+# Start Shiny Server
+CMD ["/usr/bin/shiny-server"]
