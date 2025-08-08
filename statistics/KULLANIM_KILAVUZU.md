@@ -1,190 +1,197 @@
 # 📊 İstatistik Otomasyon Sistemi - Kullanım Kılavuzu
 
-## 🚀 Başlangıç
+## 🎯 Sistem Hakkında
 
-### Sistem Gereksinimleri
-- R (4.0 veya üzeri)
-- RStudio (önerilen)
-- İnternet bağlantısı (paket yükleme için)
+Bu sistem, GitHub Pages üzerinde çalışan interaktif bir istatistik analiz aracıdır. CSV dosyalarınızı yükleyerek çeşitli istatistiksel analizler gerçekleştirebilir ve sonuçları görselleştirebilirsiniz.
 
-### Kurulum
-1. R'yi açın
-2. `run_app.R` dosyasını çalıştırın
-3. Tarayıcınızda `http://localhost:3838` adresini açın
+## 🚀 Hızlı Başlangıç
 
-## 📁 Veri Yükleme
+### 1. Veri Hazırlama
+- Verilerinizi CSV formatında hazırlayın
+- İlk satır sütun başlıklarını içermelidir
+- Sayısal değişkenler için sayısal değerler kullanın
+- Kategorik değişkenler için metin değerleri kullanabilirsiniz
 
-### Desteklenen Formatlar
-- CSV dosyaları (.csv)
-- Metin dosyaları (.txt)
+### 2. Dosya Yükleme
+- "Dosya Seç" butonuna tıklayın veya dosyayı sürükleyip bırakın
+- Sistem otomatik olarak CSV dosyanızı okuyacak ve önizleme gösterecektir
 
-### Veri Hazırlama
-- İlk satır sütun başlıkları olmalı
-- Sayısal değişkenler sayısal değerler içermeli
-- Kategorik değişkenler metin olabilir
-- Eksik veriler boş bırakılabilir
+### 3. Analiz Seçimi
+- Analiz türünü dropdown menüden seçin
+- Bağımlı ve bağımsız değişkenleri belirleyin
+- "Analizi Çalıştır" butonuna tıklayın
 
-### Örnek Veri Formatı
+## 📋 Desteklenen Analizler
+
+### 📊 Betimsel İstatistikler
+- **Amaç:** Veri setinin genel özelliklerini özetleme
+- **Çıktılar:** Ortalama, standart sapma, minimum, maksimum
+- **Kullanım:** Tek değişken seçin
+
+### 📈 T-test Analizi
+- **Amaç:** İki grup arasında ortalama farkı test etme
+- **Türler:** Bağımsız t-test, eşleştirilmiş t-test
+- **Çıktılar:** t-değeri, p-değeri, etki büyüklüğü
+- **Kullanım:** Bağımlı değişken (sürekli), bağımsız değişken (kategorik)
+
+### 📊 ANOVA Analizi
+- **Amaç:** İkiden fazla grup arasında ortalama farkı test etme
+- **Türler:** Tek yönlü ANOVA, çok yönlü ANOVA
+- **Çıktılar:** F-değeri, p-değeri, eta-kare
+- **Kullanım:** Bağımlı değişken (sürekli), bağımsız değişken (kategorik)
+
+### 🔗 Korelasyon Analizi
+- **Amaç:** İki değişken arasındaki ilişkiyi ölçme
+- **Türler:** Pearson korelasyonu, Spearman korelasyonu
+- **Çıktılar:** Korelasyon katsayısı, p-değeri
+- **Kullanım:** İki sürekli değişken seçin
+
+### 🔗 Partial Korelasyon
+- **Amaç:** Üçüncü değişkenin etkisini kontrol ederek korelasyon
+- **Çıktılar:** Partial korelasyon katsayısı, p-değeri
+- **Kullanım:** İki ana değişken + bir kontrol değişkeni
+
+### 📈 Regresyon Analizi
+- **Amaç:** Değişkenler arasındaki tahmin ilişkisini modelleme
+- **Türler:** Basit regresyon, çoklu regresyon
+- **Çıktılar:** R-kare, F-değeri, beta katsayıları
+- **Kullanım:** Bağımlı değişken + bir veya daha fazla bağımsız değişken
+
+## 📊 Veri Formatı Örnekleri
+
+### Örnek 1: Grup Karşılaştırması
 ```csv
-ID,Grup,Yas,Anksiyete,Depresyon
-1,Kontrol,25,45,32
-2,Tedavi,28,55,48
-3,Kontrol,22,42,35
+ID,Grup,Performans
+1,Kontrol,85
+2,Kontrol,82
+3,Deney,92
+4,Deney,95
 ```
 
-## 🔬 Analiz Türleri
+### Örnek 2: Korelasyon Analizi
+```csv
+ID,Yas,Anksiyete
+1,25,45
+2,28,38
+3,22,42
+4,30,35
+```
 
-### 1. Betimsel İstatistikler
-**Amaç:** Değişkenlerin temel özelliklerini özetleme
+### Örnek 3: Çoklu Değişken
+```csv
+ID,Grup,Yas,Cinsiyet,Anksiyete,Depresyon,IQ,Performans
+1,Kontrol,25,K,45,32,110,85
+2,Deney,24,E,52,45,115,92
+```
 
-**Çıktılar:**
-- N (gözlem sayısı)
-- Ortalama
-- Standart sapma
-- Minimum değer
-- Maksimum değer
+## 🎨 Görselleştirme Özellikleri
 
-**Seçenekler:**
-- Tüm sayısal değişkenler
-- Seçilen değişkenler
-- Grupla betimsel istatistikler
+### 📈 Grafik Türleri
+- **Boxplot:** Grup karşılaştırmaları için
+- **Scatter Plot:** Korelasyon analizleri için
+- **Histogram:** Dağılım analizleri için
+- **Bar Chart:** Kategorik veriler için
 
-### 2. T-test (Bağımsız)
-**Amaç:** İki grup arasında ortalama farkı test etme
-
-**Otomatik Kontroller:**
-- Shapiro-Wilk normallik testi
-- Levene varyans eşitliği testi
-- Uygun test seçimi (t-test veya Mann-Whitney)
-
-**Çıktılar:**
-- Test türü
-- t-değeri
-- Serbestlik derecesi
-- p-değeri
-- Etki büyüklüğü (Cohen's d)
-
-### 3. ANOVA (Tek Yönlü)
-**Amaç:** İkiden fazla grup arasında ortalama farkı test etme
-
-**Çıktılar:**
-- F-değeri
-- Serbestlik derecesi
-- p-değeri
-- Eta-kare (etki büyüklüğü)
-
-### 4. Korelasyon Analizi
-**Türler:**
-- Pearson korelasyonu (normal dağılım için)
-- Spearman korelasyonu (sıralı veriler için)
-
-**Çıktılar:**
-- Korelasyon katsayısı (r)
-- p-değeri
-- Korelasyon matrisi (çoklu değişken)
-
-### 5. Partial Korelasyon
-**Amaç:** Kontrol değişkenlerinin etkisini çıkararak korelasyon hesaplama
-
-**Gereksinimler:**
-- Ana değişkenler (en az 2)
-- Kontrol değişkenleri
-
-### 6. Regresyon Analizi
-**Türler:**
-- Basit regresyon (1 bağımsız değişken)
-- Çoklu regresyon (birden fazla bağımsız değişken)
-
-**Çıktılar:**
-- Regresyon katsayıları
-- R-kare değeri
-- F-testi
-- Standart hatalar
-- p-değerleri
-
-## 📈 Görselleştirme
-
-### Otomatik Grafikler
-- **Histogram:** Tek değişken dağılımı
-- **Boxplot:** Grup karşılaştırmaları
-- **Scatter Plot:** Korelasyon ve regresyon
-- **Heatmap:** Korelasyon matrisi
-
-### Grafik Özellikleri
-- Yüksek çözünürlük
-- İndirilebilir format (.png)
-- Responsive tasarım
+### 📊 Grafik Özellikleri
+- İnteraktif grafikler
+- Zoom ve pan özellikleri
+- Grafik indirme (PNG formatında)
+- Özelleştirilebilir renkler ve temalar
 
 ## 📄 Rapor Çıktıları
 
-### Word Raporu (.docx)
-- APA formatında tablolar
-- Otomatik başlık ve tarih
-- Profesyonel görünüm
+### 📄 Word Raporu (.docx)
+- APA formatında düzenlenmiş
+- Tablolar ve grafikler dahil
+- Metodoloji ve sonuç bölümleri
+- Referans listesi
 
-### PDF Raporu (.pdf)
-- Yazdırılabilir format
-- Grafik ve tablo içerikli
+### 📄 PDF Raporu (.pdf)
+- Yüksek kaliteli baskı için optimize
+- Tüm grafikler ve tablolar dahil
+- Akademik standartlara uygun
 
-### Grafik İndirme
-- Yüksek çözünürlük (.png)
+### 📊 Grafik İndirme
+- PNG formatında yüksek çözünürlük
 - Özelleştirilebilir boyutlar
-
-## 🎯 Kullanım Adımları
-
-### 1. Veri Yükleme
-1. "Dosya Seç" butonuna tıklayın
-2. CSV dosyanızı seçin
-3. Veri önizlemesini kontrol edin
-
-### 2. Analiz Seçimi
-1. "Analiz Türü" menüsünden seçim yapın
-2. Gerekli değişkenleri seçin
-3. "Analizi Çalıştır" butonuna tıklayın
-
-### 3. Sonuçları İnceleme
-1. İstatistiksel sonuçları okuyun
-2. Grafikleri inceleyin
-3. Gerekirse raporları indirin
+- Şeffaf arka plan seçeneği
 
 ## ⚠️ Önemli Notlar
 
-### Veri Kalitesi
-- Eksik veriler otomatik olarak işlenir
-- Aykırı değerler grafiklerde görünür
-- Normallik varsayımları kontrol edilir
+### 📋 Veri Gereksinimleri
+- CSV formatında dosyalar
+- UTF-8 karakter kodlaması
+- Virgül ile ayrılmış değerler
+- İlk satır sütun başlıkları
 
-### İstatistiksel Güç
-- Küçük örneklemler için uyarılar
-- Etki büyüklüğü hesaplamaları
-- Güven aralıkları (mümkün olduğunda)
+### 🔍 Analiz Öncesi Kontroller
+- Eksik veriler otomatik tespit edilir
+- Normallik kontrolü yapılır
+- Varyans homojenliği test edilir
+- Uygun analiz türü önerilir
 
-### Yorumlama
+### 📊 Sonuç Yorumlama
 - p < 0.05 istatistiksel anlamlılık
-- Etki büyüklüğü pratik önem
-- Grafikler görsel doğrulama
+- Etki büyüklüğü değerlendirmesi
+- Güven aralıkları hesaplanır
+- Post-hoc testler otomatik uygulanır
 
-## 🔧 Sorun Giderme
+## 🛠️ Teknik Detaylar
 
-### Yaygın Hatalar
-1. **Dosya yüklenemiyor:** Format kontrol edin
+### 💻 Kullanılan Teknolojiler
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Veri İşleme:** Papa Parse (CSV parsing)
+- **Görselleştirme:** Chart.js, D3.js
+- **Raporlama:** jsPDF, docx.js
+
+### 🔧 Sistem Gereksinimleri
+- Modern web tarayıcısı (Chrome, Firefox, Safari, Edge)
+- JavaScript etkin
+- İnternet bağlantısı (GitHub Pages erişimi için)
+
+### 📱 Responsive Tasarım
+- Mobil cihazlarda uyumlu
+- Tablet ve masaüstü optimizasyonu
+- Dokunmatik ekran desteği
+
+## 🆘 Sorun Giderme
+
+### ❌ Yaygın Hatalar
+1. **Dosya yüklenemiyor:** CSV formatını kontrol edin
 2. **Analiz çalışmıyor:** Değişken türlerini kontrol edin
-3. **Grafik görünmüyor:** Tarayıcıyı yenileyin
+3. **Sonuçlar görünmüyor:** Tarayıcı konsolunu kontrol edin
 
-### Performans
-- Büyük dosyalar için bekleme süresi
-- Grafik oluşturma zamanı
-- Rapor indirme süresi
+### 🔧 Çözümler
+- Dosya formatını kontrol edin
+- Değişken seçimlerini gözden geçirin
+- Tarayıcıyı yenileyin
+- Farklı bir tarayıcı deneyin
 
 ## 📞 Destek
 
-Sorunlarınız için:
+### 🆘 Yardım Alma
+- Bu kılavuzu okuyun
+- Örnek veri dosyalarını inceleyin
+- GitHub repository'sini ziyaret edin
+
+### 📧 İletişim
 - GitHub Issues kullanın
+- E-posta ile iletişime geçin
 - Dokümantasyonu kontrol edin
-- Örnek veri dosyasını test edin
+
+## 🔄 Güncellemeler
+
+### 📈 Gelecek Özellikler
+- Daha fazla analiz türü
+- Gelişmiş görselleştirmeler
+- Otomatik rapor önerileri
+- Makine öğrenmesi entegrasyonu
+
+### 🐛 Hata Düzeltmeleri
+- Düzenli güncellemeler
+- Performans iyileştirmeleri
+- Güvenlik güncellemeleri
 
 ---
 
-**Geliştirici:** Ali Yalcinkaya  
-**Versiyon:** 1.0  
-**Tarih:** 2025
+**Not:** Bu sistem eğitim ve araştırma amaçlı geliştirilmiştir. Kritik analizler için profesyonel istatistik yazılımları kullanmanız önerilir.
