@@ -1,12 +1,12 @@
 ---
-title: 'A Philosopher Asked What It's Like to Be a Bat. A Brainless Slime Mold Gave a Weirder Answer.'
+title: "A Philosopher Asked What It's Like to Be a Bat. A Brainless Slime Mold Gave a Weirder Answer."
 date: 2024-10-24
 permalink: /posts/2024/10/slime-mold-consciousness/
 tags:
   - consciousness
   - philosophy
   - neuroscience
-  - basal cognition
+  - basal-cognition
 ---
 
 In 1974, the philosopher Thomas Nagel posed a seemingly simple question in his famous essay, "What is it like to be a bat?" His point was not about imagining ourselves with wings and sonar, but about the profound mystery of consciousness itself. Nagel argued that for any conscious organism, there is something it is like to be that organism—a private, first-person reality, a "subjective character of experience" that objective science struggles to explain. It's the difference between a scientific instrument detecting a 440 Hz sound wave and you hearing the note 'A'. We can describe a bat's brain and its echolocation, but we can never truly know what it feels like for the bat to be a bat.
