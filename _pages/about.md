@@ -25,6 +25,6 @@ My work focuses on **functional and structural neuroimaging**, **neuromodulation
 </div>
 
 <div style="text-align: center;">
-  <img src="/images/tacs1.jpg" alt="Poster" style="max-width:50%; height:auto; border:1px solid #ccc; border-radius:8px;">
-  <p><em>Participant Setup for Simultaneous EEG and tACS Experiment in the Lab</em></p>
+  <img src="/images/tacs1.jpg" alt="Poster" style="max-width:45%; height:auto; border:1px solid #ccc; border-radius:8px;">
+  <p><em>Participant Setup for EEG and tACS Experiment in the Lab</em></p>
 </div>
