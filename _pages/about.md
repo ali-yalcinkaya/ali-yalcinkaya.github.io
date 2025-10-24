@@ -23,3 +23,8 @@ My work focuses on **functional and structural neuroimaging**, **neuromodulation
   <img src="/images/poster1.jpg" alt="Poster" style="max-width:60%; height:auto; border:1px solid #ccc; border-radius:8px;">
   <p><em>Presented my master's thesis poster at the 6th International Brain Stimulation Conference in Kobe, Japan.</em></p>
 </div>
+
+<div style="text-align: center;">
+  <img src="/images/tacs1.jpg" alt="Poster" style="max-width:60%; height:auto; border:1px solid #ccc; border-radius:8px;">
+  <p><em>Participant Setup for Simultaneous EEG and tACS Experiment.</em></p>
+</div>
