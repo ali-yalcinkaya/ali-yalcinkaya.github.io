@@ -26,9 +26,6 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
 
-  - title: "Statistics"
-    url: /statistics/
-
   - title: "Contact"
     url: /contact/
     
